@@ -6,7 +6,7 @@ l=[]
 for result in r:
     l.append(result)
 
-print l[0]
+#print l[0]
 
 u = urllib2.urlopen(l[0])
 page = u.read()
@@ -14,5 +14,5 @@ page = u.read()
 soup = bs4.BeautifulSoup(page)
 raw = soup.get_text()
 #print raw
-text = re.sub("[\t\n ]"," ",raw)
-print text 
+text = re.findall("[A-Z][a-z]",raw)
+print text
