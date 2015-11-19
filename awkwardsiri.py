@@ -14,5 +14,5 @@ page = u.read()
 soup = bs4.BeautifulSoup(page)
 raw = soup.get_text()
 #print raw
-text = re.findall("[A-Z][a-z]",raw)
+text = re.findall("[A-Z][a-z]+ [A-Z][a-z]+",raw)
 print text
