@@ -15,4 +15,13 @@ soup = bs4.BeautifulSoup(page)
 raw = soup.get_text()
 #print raw
 text = re.findall("[A-Z][a-z]+ [A-Z][a-z]+",raw)
-print text
+dict = {}
+for name in text:
+    if name in dict.keys():
+        dict[name]+=1;
+    else:
+        dict[name]=1;
+
+for key in sorted(dict):
+    print "%s: %s" % (key, dict[key])
+#print dict
