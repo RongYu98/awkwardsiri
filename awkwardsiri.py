@@ -25,8 +25,8 @@ for i in range(0,11):
         word = word.lower()
     for word in text:
         twoWords = word.split(" ")
-        if ( (twoWords[0].lower() in content) or (twoWords[1].lower() in content) ):
-            text.remove(word)
+        #if ( (twoWords[0].lower() in content) or (twoWords[1].lower() in content) ):
+            #text.remove(word)
     file = open("CommonWords.csv", "r")
     words = file.read()
     file.close()
@@ -45,9 +45,13 @@ for i in range(0,11):
             dict[name]=1;
 
 for key in sorted(dict):
-    if dict[key] == 1:
+    if dict[key] < 21:
         dict.pop(key)
 
-print sorted(dict)
-#for key in sorted(dict):
-    #print "%s: %s" % (key, dict[key])
+for key in sorted(dict):
+    print "%s: %s" % (key, dict[key])
+
+max = 0;
+for key in dict:
+    if dict[key] > max:
+        maxKey
