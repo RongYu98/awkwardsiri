@@ -52,6 +52,10 @@ for key in sorted(dict):
     print "%s: %s" % (key, dict[key])
 
 max = 0;
+maxKey = ""
 for key in dict:
     if dict[key] > max:
-        maxKey
+        maxKey = key
+	max = dict[key]
+
+print "The answer is most likely: %s" % (maxKey)
