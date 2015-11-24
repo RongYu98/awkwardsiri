@@ -45,6 +45,10 @@ for name in text:
     else:
         dict[name]=1;
 
-#for key in sorted(dict):
-    #print "%s: %s" % (key, dict[key])
-print dict
+
+for key in sorted(dict):
+    if dict[key]==1:
+        dict.pop(key)
+    else:
+        print "%s: %s" % (key, dict[key])
+#print dict
