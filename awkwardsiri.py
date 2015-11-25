@@ -38,6 +38,15 @@ for i in range(0,11):
         if ( (twoWords[0].lower() in content) or (twoWords[1].lower() in content) ):
             text.remove(word)
 
+    file = open("names.csv", "r")
+    names = file.read()
+    file.close()
+    content = names.split(",")
+    for word in content:
+        if word in text:
+            print word
+            text.remove(word)
+            
     for name in text:
         if name in dict.keys():
             dict[name]+=1;
@@ -45,9 +54,9 @@ for i in range(0,11):
             dict[name]=1;
 
 for key in sorted(dict):
-    if dict[key] == 1:
-        dict.pop(key)
-
-print sorted(dict)
+    if dict[key] <10:
+        dict.pop
+    else:
+        print ("%s: %s" % (key, dict[key]))
 #for key in sorted(dict):
     #print "%s: %s" % (key, dict[key])
