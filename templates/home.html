@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html> 
+  <head>
+    <title>
+      Q & A
+    </title>
+  </head>
+
+  <div style="background-image:url(https://www.wpfaster.org/wp-content/uploads/2013/06/Questionmark-Background-1.jpg);">
+
+    <font size="5">
+
+  <body bgcolor="silver" >
+    <h1 align="center">
+      Q & A
+    </h1>
+
+
+    <form method = "POST">
+      Ask a question and AwkwardSiri will try to answer: <br>
+      <input type = "text" name = "question" placeholder="Who is Mike Zamansky?" style="width:200px; height:20px;></input><br><br><br>
+      <input type="submit" name="button" value="submit"></input>
+    </form>
+
+    {% if question %}
+    Your original question is: {{question}}
+    {% endif %}
+    <br>
+    {% if response %}
+    {{response}}
+    {% endif %}
+
+    </font>
+
+  </body>
+  
+</div>
+</html>
